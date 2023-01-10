@@ -160,10 +160,12 @@ avg_yearly_deaths_proportion AS(
 )
 
 -- compare the avg_yearly_deaths/icu_proportion with the avg_icu/hospital admission_patients_proportion
+-- save the results as view
+CREATE VIEW avg_yearly_deaths_and_icu_patients_proportion AS
 SELECT avg_yearly_deaths_proportion.continent, avg_yearly_deaths_proportion.location, avg_yearly_deaths_proportion.year, 
     avg_yearly_deaths_proportion.avg_yearly_deaths_proportion, avg_icu_patients_proportion.avg_icu_patients_proportion
 from avg_yearly_deaths_proportion
-JOIN avg_icu_patients_proportion ON avg_yearly_deaths_proportion.year = avg_icu_patients_proportion.year;
+JOIN avg_icu_patients_proportion ON avg_yearly_deaths_proportion.year = avg_icu_patients_proportion.year
 
 
 
