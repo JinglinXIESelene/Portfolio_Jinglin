@@ -1,4 +1,5 @@
--- basic queries to get an initial understanding of the data
+-- data source: https://ourworldindata.org/covid-deaths
+-- basic queries to get an initial understanding of the CovidDeaths data coving six continent and most of countries
 SELECT top 100 * 
 from PorfolioProject.dbo.CovidDeath
 
